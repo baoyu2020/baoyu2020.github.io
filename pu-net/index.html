@@ -1,0 +1,396 @@
+<html class="gr__richzhang_github_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./The Unreasonable Effectiveness of Deep Networks as a Perceptual Metric_files/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	h1 {
+		font-weight:300;
+	}
+
+	.disclaimerbox {
+		background-color: #eee;
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	img.rounded {
+		border: 0px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		        15px 15px 0 0px #fff, /* The fourth layer */
+		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		        20px 20px 0 0px #fff, /* The fifth layer */
+		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		        25px 25px 0 0px #fff, /* The fifth layer */
+		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+
+	.vert-cent {
+		position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+
+  
+		<title>PU-Net: Point Cloud Upsampling Network</title>
+		<meta property="og:image" content="https://yulequan.github.io//pu-net/figures/SurfaceReconstruction.png">
+		<meta property="og:title" content="PU-Net: Point Cloud Upsampling Network. In CVPR, 2018.">
+  </head>
+
+  <body data-gr-c-s-loaded="true">
+    <br>
+          <center>
+          	<span style="font-size:34px">PU-Net: Point Cloud Upsampling Network</span><br>
+	  		  
+	  		  <br>
+
+	  		  <table align="center" width="900px">
+	  			  <tbody><tr>
+	  	              <td align="center" width="150px">
+	  					<center>
+	  						<span style="font-size:22px"><a href="http://appsrv.cse.cuhk.edu.hk/~lqyu/">Lequan Yu</a><sup>*1,3</sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="150px">
+	  					<center>
+	  						<span style="font-size:22px">Xianzhi Li<sup>*1</sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="200px">
+	  					<center>
+	  						<span style="font-size:22px"><a href="http://www.cse.cuhk.edu.hk/~cwfu/">Chi-Wing Fu</a><sup>1,3</sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="200px">
+	  					<center>
+	  						<span style="font-size:22px"><a href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</a><sup>2</sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="200px">
+	  					<center>
+	  						<span style="font-size:22px"><a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a><sup>1,3</sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  			  </tr>
+			  </tbody></table>
+	  		  
+			  <table align="center" width="800px"><tbody>
+			  <tr>
+	  	              <td align="center" width="50px"></td>
+	  	              <td align="center" width="400px">
+	  					<center>
+				          	<span style="font-size:18px"><sup>1</sup>The Chinese University of Hong Kong</span>
+		  		  		</center>
+		  	      </td>
+	  	              <td align="center" width="300px">
+	  					<center>
+				          	<span style="font-size:18px"><sup>2</sup>Tel Aviv University</span>
+		  		  		</center>
+		  	      </td>
+	  	              <td align="center" width="50px"></td>
+			  </tr>
+			  </tbody></table>
+			  
+			  <table align="center" width="800px"><tbody>
+			  <tr>
+	  	              <td align="center" width=800px">
+	  					<center>
+				          	<span style="font-size:18px"><sup>3</sup>Guangdong Provincial Key Laboratory of Computer Vision and Virtual Reality Technology, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, China</span>
+		  		  		</center>
+		  	      </td>
+			  </tr>
+			  </tbody></table>
+
+			  <br>
+
+	  		  <table align="center" width="1100px">
+	  			  <tbody><tr>
+	  	              <td align="center" width="275px">
+	  					<center>
+				          	<span style="font-size:18px"></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="225px">
+	  					<center>
+	  						<span style="font-size:22px">Code <a href="https://github.com/yulequan/PU-Net"> [GitHub]</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="225px">
+	  					<center>
+	  						<span style="font-size:22px">CVPR 2018<a href="https://arxiv.org/pdf/1801.06761.pdf"> [Paper]</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="275px">
+	  					<center>
+				          	<span style="font-size:18px"></span>
+		  		  		</center>
+		  		  	  </td>
+			  </tr></tbody></table>
+          </center>
+
+          <br>
+  		  <table align="center" width="1100px">
+  			  <tbody><tr>
+  	              <td width="400px">
+  					<center>
+  	                	<img class="rounded" src="./figures/SurfaceReconstruction.png" width="900px">
+  	                	<br>
+					</center>
+  	              </td>
+  	              </tr>
+  	              </tbody></table>
+
+  		  <br>
+		  <hr>
+
+  		  <center><h1>Abstract</h1></center>
+					Learning and analyzing 3D point clouds with deep networks is challenging due to the sparseness and irregularity of the data. In this paper, we present a data-driven point cloud upsampling technique. The key idea is to learn multilevel features per point and expand the point set via a multibranch convolution unit implicitly in feature space. The expanded feature is then split to a multitude of features, which are then reconstructed to an upsampled point set. Our network is applied at a patch-level, with a joint loss function that encourages the upsampled points to remain on the underlying surface with a uniform distribution. We conduct various experiments using synthesis and scan data to evaluate our method and demonstrate its superiority over some baseline methods and an optimization-based method. Results show that our upsampled points have better uniformity and are located closer to the underlying surfaces.
+
+		<br><br><hr>
+
+		<center><h1>Overview</h1></center>
+  		    <table align="center" width="900px">
+  			<tbody>
+  			  	<tr>
+  			  		<td align="center"><img class="round" style="width:900px" src="./figures/framework.png"></td>	
+			  	</tr>
+			  	<tr>
+			  		<td align="center"><h3>Architecture of PU-Net.</h3></td>
+			  	</tr>
+			</tbody>
+			</table>
+				
+		  	<br>
+ 			
+ 			<table align="center" width="900px">
+		  	<tbody>
+  			  	<tr>
+  			  		<td align="center"><img class="round" style="width:800px" src="./figures/featureexpansion.png"></td>	
+			  	</tr>
+			  	<tr>
+			  		<td align="center"><h3>Architecture of Feature Expansion.</h3></td>
+			  	</tr>
+			</tbody>
+			</table>
+
+			<br>
+
+
+  		  <center>
+				<span style="font-size:28px"><a href="https://github.com/yulequan/PU-Net">[GitHub]</a>
+			  <br>
+			  </span></center>
+		  <br>
+
+		  <hr>
+
+  		  <center><h1>Paper and Supplementary Material</h1></center>
+  		  <table align="center" width="500" px="">
+	 		
+  			  <tbody><tr>
+				  <td><a href=""><img class="layered-paper-big" style="height:175px" src="./figures/paper.png"></a></td>
+				  <td><span style="font-size:12pt">Lequan Yu, Xianzhi Li, Chi-Wing Fu, <br>Daniel Cohen-Or, Pheng-Ann Heng.</span><br>
+				  <b><span style="font-size:12pt">EC-Net: an Edge-aware Point set Consolidation Network.</span></b><br>
+				  <span style="font-size:12pt">In CVPR, 2018. 
+				  <br>
+				  <br>
+				  <a href="https://arxiv.org/pdf/1801.06761.pdf">[Paper]</a> <a href="https://yulequan.github.io/files/CVPR18_PUNet_supp.pdf">[supp]</a> <a href="https://yulequan.github.io/files/cvpr18_posterv2.pdf">[poster]</a>
+				  </td>
+  	              
+              </tr>
+  		</tbody></table>
+		  
+		<br>
+		<br>
+		<hr>
+
+		<center><h1>Performance comparisons<br></h1></center>
+		As far as we know, we are not aware of any deep learning-based method for point cloud upsampling, so we design some baseline methods for comparison. Since <a href="https://arxiv.org/abs/1612.00593">PointNet</a> and <a href="https://arxiv.org/abs/1706.02413">PointNet++</a> are pioneers for 3D point cloud reasoning with deep learning techniques, we design the baselines based on them.
+  		
+  		<br>
+  		<br>
+
+  		We formulate two metrics to measure the deviation between the output points and the ground truth meshes, as well as the distribution uniformity of the output points. We design the <em><b>normalized uniformity coefficient (NUC)</b></em> to evaluate the uniformity of point clouds. Please refer paper for more details.
+
+  		<br><br>
+  		<table align="center" width="900px">
+			  <tbody>
+			  <tr>
+				  <td align="center"><span style="font-size:24pt"><img class="paper-big" style="width:900px" src="./figures/deviation.png"></span></td>
+              </tr>
+              <tr>
+			  		<td align="center"><h3>Visual comparison of deviation. The colors on points reveal the surface distance errors.</h3></td>
+			  </tr>
+
+
+			  <tr>
+				  <td align="center"><span style="font-size:24pt"><img class="paper-big" style="width:900px" src="./figures/SurfaceReconstruction.png"></span></td>
+              </tr>
+              <tr>
+			  		<td align="center"><h3>Surface reconstruction results from the upsampled point clouds.</h3></td>
+			  </tr>
+
+
+			  <tr>
+				  <td align="center"><span style="font-size:24pt"><img class="paper-big" style="width:900px" src="./figures/quantitative.png"></span></td>
+              </tr>
+              <tr>
+			  		<td align="center"><h3>Quantitative comparison on testing dataset.</h3></td>
+			  </tr>
+
+  		</tbody></table> 
+  		
+  		<br>
+  		<hr>
+
+ 		<center><h1>More Experiments<br></h1></center>
+  		We also apply our method to point clouds produced from real scans downloaded from Aim@Shape and obtained from the EAR project. Real scan point clouds are often noisy and have inhomogeneous point distribution. Comparing with the input point clouds, our method is still able to generate more points near the edges and on the surface, while better preserving the sharp features. 
+
+  		<br><br>
+  		<table align="center" width="800px">
+  		<tbody>
+			  <tr>
+				  <td align="center"><span style="font-size:24pt"><img class="paper-big" style="width:700px" src="./figures/Iterative.png"></span></td>
+              </tr>
+              <tr>
+			  		<td align="center"><h3>Results of iterative upsampling.</h3></td>
+			  </tr>
+
+			  <tr>
+				  <td align="center"><span style="font-size:24pt"><img class="paper-big" style="width:700px" src="./figures/noise_reconstruction.png"></span></td>
+              </tr>
+              <tr>
+			  		<td align="center"><h3>Surface reconstruction results from noisy input points.</h3></td>
+			  </tr>
+
+			  <tr>
+				  <td align="center"><span style="font-size:24pt"><img class="paper-big" style="width:700px" src="./figures/RealScan.png"></span></td>
+              </tr>
+              <tr>
+			  		<td align="center"><h3>Results on real-scanned point clouds.</h3></td>
+			  </tr>
+  		</tbody>
+  		</table> 
+
+  		<br>
+  		<br>
+  		<hr>
+
+		  <!--
+  		  <center><h1>Poster</h1></center><table align="center" width="200" px="">
+	 		
+  			  <tbody><tr>
+				  <td><a href="https://richzhang.github.io/PerceptualSimilarity/index_files/poster_cvpr.pdf"><img class="paper-big" style="width:600px" src="./The Unreasonable Effectiveness of Deep Networks as a Perceptual Metric_files/poster_teaser.png"></a></td>
+              </tr>
+  		  </tbody></table>
+		  <br>
+
+		  <table align="center" width="600px">
+			  <tbody><tr>
+				  <td><span style="font-size:24pt"><center>
+				  	<a href="https://richzhang.github.io/PerceptualSimilarity/index_files/poster_cvpr.pdf">[PDF]</a>
+  	              </center></span></td>
+              </tr>
+  		  </tbody></table>
+
+  		  <br>
+		  <hr>
+		-->
+  		  <table align="center" width="1100px">
+  			<tbody>
+			<tr><td width="400px"><left>
+	  		<center><h1>Acknowledgements</h1></center>
+	  		  We thank anonymous reviewers for the comments and suggestions. The work is supported in part by the National Basic Program of China, the 973 Program (Project No. 2015CB351706), the Research Grants Council of the Hong Kong Special Administrative Region (Project no. CUHK 14225616), the Shenzhen Science and Technology Program (No. JCYJ20170413162617606), and the CUHK strategic recruitment fund.
+			</left></td></tr>
+			</tbody></table>
+		<br>
+		<br>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+</body></html>

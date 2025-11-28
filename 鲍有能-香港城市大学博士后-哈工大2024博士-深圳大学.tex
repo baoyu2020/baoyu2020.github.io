@@ -1,0 +1,315 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+% choose Xelatex compiler 选择Xelatex进行编译
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} 
+\usepackage{linespacing_fix}
+\usepackage{cite}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+
+% \usepackage{emoji}
+% \setmainfont{DejaVu Sans} % 确保使用支持emoji的字体
+% you should read https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes to learn basic latex
+
+% read manual https://github.com/xiangrongjingujiu/latex-languageSelection
+\usepackage[Chinese]{languageSelection}
+% \usepackage[English]{languageSelection}
+
+% read manual https://github.com/xiangrongjingujiu/latex-note-plus
+\usepackage[color=blue]{notePlus} 
+
+
+\begin{document}
+\pagenumbering{gobble}
+
+% "%"后面的所有内容是注释而非代码，不会输出到最后的PDF中
+% 使用本模板，只需要参照输出的PDF，在本文档的相应位置做简单替换即可
+% 修改之后，输出更新后的PDF，只需要点击Overleaf中的“Recompile”按钮即可
+
+% 填写你的名字
+\CN{
+  \name{鲍有能}
+}
+\EN{
+  \name{Youneng Bao}
+}
+%**********************************相关信息****************************************
+% \otherInfo后面的四个大括号里的所有信息都会在一行输出，最多使用四个大括号，填写四个信息
+% 如果选择不填信息，那么大括号必须空着不写，而不能删除大括号。
+% 如果想要把信息写两行，那就用两次指令\otherInfo{}{}{}{}即可
+\CN{
+  \info{手机/微信：18098861727}{邮箱：baoyouneng@163.com}{}{}
+  \info{性别：男}{出生年月：1994年4月}{}{}{}
+  % \info{政治面貌：中共党员}{籍贯：湖北省黄冈市}{}{}
+  % \info{学术主页：https://scholar.google.com/citations?hl=en&user=lKD67zcAAAAJ}
+  \info{研究方向：视觉数据压缩理论与系统，AI编码系统的安全和部署}{}{}{}
+  % \info{专业及代码:信息与通信工程~0810}{}{}{}
+  % \info{研究方向:人工智能的部署以及鲁棒性}{}{}{}
+}
+\EN{
+  \info{mobile: (+86) 18098861727}{baoyouneng@163.com}{}{}
+  \info{Gender: Male}{Birthplace: Macheng, Hubei Province}{}{}
+  \info{Current address: Shenzhen, Guangdong Province}{}{}{}
+}
+
+%*********************************照片**********************************************
+%照片需要放到images文件夹下，名字必须是you.jpg，如果不需要照片可以注释掉此行命令
+%0.15的意思是，照片的大小是0.15倍，调整大小，避免遮挡文字
+\yourphoto{0.12}
+%**********************************正文**********************************************
+
+
+%***大标题，下面有横线做分割
+%***一般的标题有：教育背景，实习（项目）经历，工作经历，自我评价，求职意向，等等
+\CN{
+  \section{\faGraduationCap \ 教育背景}
+}
+\EN{
+  \section{EDUCATION}
+}
+
+%***********一行子标题**************
+%***第一个大括号里的内容向左对齐，第二个大括号里的内容向右对齐
+%***\textbf{}括号里的字是粗体，\textit{}括号里的字是斜体
+\CN{
+  \datedsubsection{\textbf{哈尔滨工业大学(985工程)，信息与通信工程，}\textbf{工学博士 \ \ 导师:\href{https://faculty.hitsz.edu.cn/liangyongsheng}{梁永生教授}}}{2020.09 - 2024.11}
+}
+
+\CN{
+  \begin{itemize} [parsep=1ex]
+    \item \textbf{毕业课题}：高效鲁棒的可学习图像压缩算法研究
+  \end{itemize}
+}
+
+
+\CN{
+  \datedsubsection{\textbf{大连理工大学(985工程)，工学硕士 \ \ 导师:霍军周教授}}{2016.09 - 2019.07}
+}
+
+
+
+\CN{
+  \datedsubsection{\textbf{哈尔滨工程大学(211工程)，本科}}{2012.09 - 2016.07}
+}
+
+
+\CN{
+  \section{\faBriefcase \ 工作经历}
+}
+
+\CN{
+  \datedsubsection{\textbf{香港城市大学}，博士后研究员，合作导师：\href{https://kedema.org/}{Kede Ma 教授}}{2025.01 - 至今}
+  \CN{
+  \begin{itemize} [parsep=1ex]
+    \item \textbf{合作课题}：视觉大模型的Token压缩，高内涵（High-Content）三维细胞图像压缩
+  \end{itemize}
+}
+}
+
+\CN{
+  \datedsubsection{\textbf{迈瑞医疗有限公司}，智能系统工程师(全职)}{2019.09 - 2020.08}
+}
+
+\CN{
+  \datedsubsection{\textbf{鹏城实验室}，科研实习生}{2022.06 - 2024.06}
+}
+
+
+\CN{
+  \section{\faBook  \ 论文/专利}
+}
+
+% \CN{
+%   \datedsubsection{研究领域和兴趣}{}
+% }
+
+
+\CN{
+  \datedsubsection{\textbf{科研论文(一作/共一论文: 10篇):~}{\href{https://scholar.google.com/citations?user=lKD67zcAAAAJ&hl=en}{\textbf{Google Scholar}}}
+  ~{\href{https://dblp.org/pid/307/3082.html}{\textbf{DBLP}}}
+  }{}
+
+  % \vspace{0.3em}
+  \begin{itemize}[label=\textcolor{NavyBlue}{\faFileText}, parsep=0.9ex]
+    \item \textcolor{NavyBlue}{研究方向一：率失真优化理论与数据蒸馏}
+  \end{itemize}
+%  \vspace{0.3em}
+  \begin{enumerate}[parsep=0.8ex]
+    \item \textbf{Youneng Bao}, Yiping Liu, Zhuo Chen, Yongsheng Liang, Mu Li, Kede Ma$^{\dagger}$. Dataset Distillation as Data Compression: A Rate-Utility Perspective. In {Proceedings of the IEEE/CVF International Conference on Computer Vision, 2025.} (\textbf{CCF-A会议})
+  \end{enumerate}
+}
+
+
+\begin{itemize}[label=\textcolor{NavyBlue}{\faRocket}, parsep=0.9ex]
+  \item \textcolor{NavyBlue}{研究方向二：面向实用化部署的高效智能编码}
+\end{itemize}
+
+
+  \begin{enumerate}[parsep=1ex]
+    \item \textbf{Youneng Bao}, Yulong Chen, Yiping Liu, Yichen Yang, Peng Qin, Mu Li, and Yongsheng Liang$^{\dagger}$. DynaQuant: Dynamic Mixed-Precision Quantization for Learned Image Compression. In {Proceedings of the AAAI Conference on Artificial Intelligence}, 2026. (\textbf{CCF-A会议})
+    \item \textbf{Youneng Bao}, Fanyang Meng, Chao Li, Siwei Ma, Yonghong Tian, Yongsheng Liang$^{\dagger}$. Nonlinear Transforms in Learned Image Compression from a Communication Perspective. In {IEEE Transactions on Circuits and Systems for Video Technology}, 2022, 33(4): 1922-1936. (\textbf{JCR 1 区, 中科院 1 区top, IF = 8.4, CCF-B})
+    \item \textbf{Youneng Bao}, Wen Tan, Chuanmin Jia, Mu Li, Yongsheng Liang$^{\dagger}$, Yonghong Tian. ShiftLIC: High-Efficiency Learned Image Compression with Spatial-Channel Shift Operations. In {IEEE Transactions on Circuits and Systems for Video Technology}, 2025. (\textbf{JCR 1 区, 中科院 1 区top, IF = 8.4, CCF-B})
+    \item \textbf{Youneng Bao}, Wen Tan, Mu Li, Jiacong Chen, Qingyu Mao, Yongsheng Liang$^{\dagger}$. SFNIC: Hybrid Spatial-Frequency Information for Lightweight Neural Image Compression. In {CAAI Transactions on Intelligence Technology}, 2025. (\textbf{JCR 1 区, 中科院 1 区top, IF = 8.6})
+    \item \textbf{Youneng Bao}, Wen Tan, Linfeng Zheng, Fanyang Meng, Wei Liu, Yongsheng Liang$^{\dagger}$. Taylor Series based Dual-Branch Transformation for Learned Image Compression. In {Signal Processing}, 2023, 212: 109128. (\textbf{JCR 2 区, 中科院 2 区, IF = 3.6, CCF-C})
+    \item \textbf{Youneng Bao}, Chao Li, Fanyang Meng, Yongsheng Liang$^{\dagger}$, Wei Liu, Kaiyu Liu. MBB: A Multi-Scale Method for Data based on Bit Plane Slicing. In {Proceedings of {IEEE International Conference on Image Processing}}, 2021, 859-863. (\textbf{CCF-C会议})  
+    \item  Mu Li, \textbf{Youneng Bao}, Xiaohang Sui, Jinxing Li$^{\dagger}$, Guangming Lu, Yong Xu. Learning Content-Weighted Pseudocylindrical Representation for 360° Image Compression. In {IEEE Transactions on Image Processing}, 2024, 33: 5975-5988. （\textbf{JCR 1 区, 中科院 1 区top, IF=10.8, CCF-A}）
+
+  \end{enumerate}
+
+\vspace{0.3em}
+\begin{itemize}[label=\textcolor{NavyBlue}{\faShield}, parsep=0.9ex]
+  \item \textcolor{NavyBlue}{研究方向三：智能编码系统的鲁棒性与安全性}
+\end{itemize}
+
+  \begin{enumerate}[parsep=1ex]
+    \item \textbf{Youneng Bao}, Wen Tan, Mu Li, Fanyang Meng, Yongsheng Liang$^{\dagger}$. Stable Successive Neural Image Compression via Coherent Demodulation-based Transformation[J]. Signal Processing, 2025, 227: 109741. (\textbf{JCR 2 区, 中科院 2 区, IF = 3.6, CCF-C}) 
+    \item Zhi Cao, \textbf{Youneng Bao*}, Fanyang Meng, Chao Li, Wen Tan, Genhong Wang, and Yongsheng Liang$^{\dagger}$. Enhancing Adversarial Training with Prior Knowledge Distillation for Robust Image Compression[C]. In Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing, 2024: 3430--3434. (\textbf{共同一作, CCF-B})
+    \item Can Luo, \textbf{Youneng Bao*}, Wen Tan, Chao Li, Fanyang Meng, and Yongsheng Liang$^{\dagger}$. A Complex-Valued Neural Network Based Robust Image Compression[C]. In Proceedings of Chinese Conference on Pattern Recognition and Computer Vision, 2023: 53--64. (\textbf{共同一作, CCF-C会议})  
+  \end{enumerate}
+
+% \CN{
+%   \datedsubsection{\textbf{标准提案}}{}
+%   \begin{enumerate}[parsep=0.5ex]
+%     \item Algorithm Discription for Image Compression with Self-adaptive Computational Cost. IEEE1857.11 VC-35-M229, 
+%   \end{enumerate}
+% }
+
+\CN{
+  \datedsubsection{\textbf{发明专利，授权专利21项，其中学生一作4项}}{}
+  \begin{itemize}[parsep=0.5ex]
+    \item  梁永生，\textbf{鲍有能}，谭文，李超。一种图像编码的方法、解码的方法及相关装置。国家发明专利，专利号：ZL202210496086.6。授权日期：2022.09.13
+    \item 梁永生，\textbf{鲍有能}，罗灿，谭文，李超。一种图像压缩方法、装置、设备及存储介质。国家发明专利，专利号：ZL20231.16678.8。授权日期：2023.05.30
+  \end{itemize}
+}
+
+
+\CN{
+\section{\faSearch\ 研究陈述}
+}
+
+
+\CN{
+    \begin{itemize}[leftmargin=*, label={}]
+        \item 围绕智能视觉数据压缩这一核心方向，我在博士及博士后阶段系统开展了以下研究工作：\par\par
+        \item \vspace{0.3em}
+        \noindent{\large \textcolor{NavyBlue}{\faFileText} \textbf{率失真优化理论与数据蒸馏}}
+        \vspace{0.3em}        
+        \item[] 从信息论视角重构数据蒸馏问题，建立``码率-数据集效用"的优化框架，为大规模数据集的高效处理提供了新思路：
+        \begin{itemize}[leftmargin=1.5em, itemsep=0.2em]
+            \item 创新点：（1）提出了基于率-效用权衡的数据集蒸馏新范式，将数据蒸馏问题转化为率失真优化问题，为数据集压缩提供了理论指导；（2）建立了首个端到端的``码率-数据集效用"蒸馏框架，实现了数据集大小与模型精度的最优权衡。
+            \item 成果：相关工作发表在ICCV 2025。
+        \end{itemize}
+
+        \item \vspace{0.3em}
+        \noindent{\large \textcolor{NavyBlue}{\faRocket} \textbf{面向实用化部署的高效智能编码}}
+        \vspace{0.3em}
+        
+        \item[] 针对智能编码算法计算效率低的问题，开发了轻量化智能编码算法，将计算效率提升约5倍，为实用化部署奠定基础。
+        \begin{itemize}[leftmargin=1.5em, itemsep=0.2em]
+          \item 创新点：（1）引入泰勒级数分解的双分支变换，建立了非线性变换的数学基础；（2）提出了基于通信理论的非线性变换；（3）设计了空间-通道位移操作以及空间-频域双域特征融合方法，
+          \item 成果：相关工作发表在IEEE TCSVT，Signal Processing等国际期刊。
+        \end{itemize}
+        
+        \vspace{0.3em}
+        \noindent{\large \textcolor{NavyBlue}{\faShield} \textbf{智能编码系统的鲁棒性与安全性}}
+        \vspace{0.3em}
+        
+        \item[] 理论分析了智能编码系统的鲁棒性问题，构建了抗噪声干扰的鲁棒编码算法，为AI编码系统的可靠部署提供了理论保障。
+        \begin{itemize}[leftmargin=1.5em, itemsep=0.2em]
+            \item 创新点：（1）提出了基于相干解调的稳定编码框架；（2）提出了基于复值神经网络的神经压缩算法；
+            \item 成果：相关工作发表在Signal Processing、ICASSP等国际期刊和会议。
+        \end{itemize}
+
+        \vspace{0.3em}
+        \noindent{\large \textcolor{NavyBlue}{\faLightbulbO} \textbf{未来研究展望}}
+        \vspace{0.3em}
+        
+        \item[] 未来，我将进一步拓展研究的广度与深度：将智能压缩框架延伸至医疗影像领域，实现TB级医学数据的高效压缩；融合生成式模型与语义通信理论，构建端到端的内容感知压缩体系；探索大语言模型与视觉编码的协同设计，构建统一的多模态压缩系统；基于信息论和机器学习理论，提升AI编码系统的可解释性与可信度。致力于为新一代可信、可解释且高效的智能编码系统提供核心理论支撑和技术突破。
+    \end{itemize}
+}
+
+
+
+
+\CN{
+\section{\faFlask \ 科研项目经历}
+}
+
+\CN{
+  \datedsubsection{\textbf{国家自然科学基金面上项目}，基于内容的智能视频编码优化研究}{2019.01-2022.12}
+\begin{itemize}[parsep=0.8ex]
+  \item 负责项目的中期报告、年度报告、结题报告的撰写；
+\end{itemize}
+}
+
+\CN{
+  \datedsubsection{\textbf{国家自然科学基金重点项目}，超高清视频编码高效算法与芯片架构}{2021.01-2025.12}
+  \begin{itemize}[parsep=0.8ex]
+    \item 参与项目申请书的撰写，答辩PPT的撰写；
+    \item 负责项目中神经网络图像编码部分的研究 （博士课题）；
+    \item 负责项目中期报告、年度报告、结题报告的材料撰写；
+  \end{itemize}
+}
+
+\CN{
+  \datedsubsection{\textbf{广东省重点建设学科项目}，基于神经辐射场的高效视频编码技术研究}{2023.01-2025.12}
+\begin{itemize}[parsep=0.8ex]
+  \item 参与项目申请书，中期检查报告的撰写；
+  \item 指导硕士生完成了神经辐射场高效表示、码率调节部分的研究，获得两项专利授权；
+\end{itemize}
+}
+
+
+\CN{
+\section{\faBullhorn \  指导与教学经历}
+}
+
+\CN{
+  \begin{itemize}[parsep=0.8ex]
+    \item \textbf{硕士生科研指导}：作为项目核心成员，累计指导/合作指导硕士研究生6名，围绕AI编码、神经辐射场等前沿方向开展研究。通过定期讨论与实验指导，所指导学生的相关成果已发表于CCF系列会议（如ICASSP, PRCV），并获得发明专利授权4项。
+  \end{itemize}
+}
+
+\CN{
+\section{\faTrophy \  荣誉奖项}
+}
+
+\CN{
+  \begin{itemize}[parsep=0.8ex]
+    \item 国家奖学金、校级/院级奖学金
+  \end{itemize}
+}
+
+\CN{
+\section{\faUsers \  学术服务}
+}
+\CN{
+  \begin{itemize}[parsep=0.8ex]
+    \item \textbf{期刊审稿人}：IEEE TIP, TCSVT, TMM, TCE
+    \item \textbf{会议审稿人}：CVPR, ICCV, ICLR, AAAI, ACM MM, ICASSP, ICIP, PCS
+  \end{itemize}
+}
+
+
+
+
+\CN{
+\section{\faCogs \ 专业技能}
+}
+\CN{
+    \begin{itemize}[parsep=0.8ex]
+      \item \textbf{研究方向}：神经网络轻量化/部署，AI系统鲁棒性，生成模型，数据压缩
+      \item \textbf{编程与框架}：Python, PyTorch, Matlab, C++
+      \item \textbf{软件工具}：Git, Docker, LaTeX
+    \end{itemize}
+}
+
+
+
+\end{document}

@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="main.css" rel="stylesheet" media="all">
+<meta name="description" content="Automated Melanoma Recognition via Very Deep Residual Networks" />
+<meta name="keywords" content="Automated melanoma recognition, very deep convolutional neural networks, residual learning, fully convolutional neural networks, skin lesion analysis">
+<script>
+function buttonSwitch(id, text)
+{
+	old_src = document.getElementById(id).src;
+	ind = old_src.lastIndexOf('/');
+	document.getElementById(id).src = old_src.substr(0,ind+1) + text;
+}
+
+
+</script>
+<title>Automated Melanoma Recognition in Dermoscopy Images via Very Deep Residual Networks </title>
+</head>
+
+<body>
+
+<div id="top_arrow" style="position: fixed; bottom: 10px; right: 10px;">
+<a href="#title">
+<img src="./figures/top_arrow.jpg" style="border: 0pt none ; width: 26px; height: 32px;"/></a>
+</div>
+<h2 id="title" class="auto-style1">
+<!--<img alt="" class="style4" height="135" src="figures/siga_2012.jpg" style="float: left" width="123">-->
+Automated Melanoma Recognition in Dermoscopy Images via Very Deep Residual Networks</h2>
+<p class="auto-style7"  align="center">
+	<a href="http://appsrv.cse.cuhk.edu.hk/~lqyu/" target="_blank">Lequan Yu</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+	<a href="http://appsrv.cse.cuhk.edu.hk/~hchen/" target="_blank">Hao Chen</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+	<a href="http://appsrv.cse.cuhk.edu.hk/~qdou/" target="_blank">Qi Dou</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+	<a href="http://sn.polyu.edu.hk/en/people/academic_staff/#harry.qin" target="_blank">Jing Qin</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+	<a href="http://www.cse.cuhk.edu.hk/~pheng/" target="_blank">Pheng Ann Heng</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class="auto-style7"  align="center"><sup>1</sup>The Chinese Univeristy of Hong Kong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>The Hong Kong Polytechnic University</p>
+<!--<p class="auto-style7"  align="center">&nbsp;&nbsp;&nbsp; </p>-->
+<p align=left>&nbsp;</p>
+<p align="center">
+<table style="width:960px" align="center">
+<tr>
+	<td><img width=690px alt="" src="figures/teaser.png"></td>	
+</tr>
+<tr>
+	<td><p class="auto-style5">Automated melanoma recognition from dermoscopy images is a very challenging task. The main challenges include (from left to right): high degree of visual similarity between melanoma and non-melanoma lesions, relatively low contrast between skin lesions and normal skin regions, and artifacts in images. The top column images show non-melanomas and bottom column images show melanomas. Blue contours indicate the skin lesions.</p></td>
+</tr>
+</table>
+
+<p class="style2"><strong><span class="auto-style4">Abstract</span></strong></p>
+<p align="justify",class="auto-style5"> Automated melanoma recognition in dermoscopy images is a very challenging task due to the low contrast of skin lesions, the huge intra-class variation of melanomas, the high degree of visual similarity between melanoma and non-melanoma lesions, and the existence of many artifacts in the image. In order to meet these challenges, we propose a novel method for melanoma recognition by leveraging very deep convolutional neural networks (CNNs). Compared with existing methods employing either low-level hand-crafted features or CNNs with shallower architectures, our substantially deeper networks (more than 50 layers) can acquire richer and more discriminative features for more accurate recognition. To take full advantage of very deep networks, we propose a set of schemes to ensure effective training and learning under limited training data. First, we apply the residual learning to cope with the degradation and overfitting problems when a network goes deeper. This technique can ensure that our networks benefit from the performance gains achieved by increasing network depth. Then, we construct a fully convolutional residual network (FCRN) for accurate skin lesion segmentation, and further enhance its capability by incorporating a multi-scale contextual information integration scheme. Finally, we seamlessly integrate the proposed FCRN (for segmentation) and other very deep residual networks (for classification) to form a two-stage framework. This framework enables the classification network to extract more representative and specific features based on segmented results instead of the whole dermoscopy images, further alleviating the insufficiency of training data. The proposed framework is extensively evaluated on <a href="https://challenge.kitware.com/#challenge/560d7856cad3a57cfde481ba">ISBI 2016 Skin Lesion Analysis Towards Melanoma Detection Challenge dataset</a>. Experimental results demonstrate the significant performance gains of the proposed framework, ranking the first in classification and the second in segmentation among 25 teams and 28 teams, respectively (complete results:<a href="https://challenge.kitware.com/#phase/5667455bcad3a56fac786791">classification</a> and <a href="https://challenge.kitware.com/#phase/566744dccad3a56fac786787">segmentation</a>). This study corroborates that very deep CNNs with effective training mechanisms can be employed to solve complicated medical image analysis tasks, even with limited training data.</p>
+
+<p class="auto-style5">&nbsp;</p>
+
+
+
+<p id="Method", class="auto-style4"><strong>Method</strong></p>
+<table width="100%" align="center">
+<tr>
+	<td><img width="900px" alt="" src="figures/method.png"></td>	
+</tr>
+<tr>
+	<td><p class="auto-style5">The proposed framework contains two main components. First, we construct a very deep fully convolutional residual network, which incorporates multi-scale feature representations, to segment skin lesions. Second, based on the segmentation results, we employ a very deep residual network to precisely distinguish melanomas from non-melanoma lesions..</p></td>
+</tr>
+</table>
+<p class="auto-style5">&nbsp;</p>
+
+
+<p id="Results", class="auto-style4"><strong>Results</strong></p>
+<table width="100%">
+<tr>
+    <td width="5%"></td>
+    <td width="90%">
+        <div><img src="figures/result1.png" width="900px">
+        <p align="justify" class="auto-style5">Examples of some skin lesion segmentation results from test images. The first and second rows are non-melanoma and melanoma lesions, respectively. The red and blue contours indicate the segmentation results of our method and ground truth, respectively.</p>
+        </div>
+    </td>
+    <td width="5%"></td>
+</tr>
+</table>
+<p></p>
+<table>
+<tr>
+    <td width="5%"></td>
+    <td width="44%">
+        <div align="left"><img src="figures/result2.png" width="100%">
+        <p align="justify" class="auto-style5">There are totally 28 submissions. The top 10 entries are shown here and the ranking (from top to bottom) was made according to the JA.</p>
+        </div>
+    </td>
+    <td width="2%">
+    <td width="44%">
+        <div align="right"><img src="figures/result3.png" width="100%">
+        <p align="justify" class="auto-style5">There are totally 25 submissions. The top 10 entries are shown here and the ranking was made according to the AP scores.</p>
+        </div>
+    </td>
+    <td width="5%"></td>
+</tr>
+</table>
+<p class="auto-style5">&nbsp;</p>
+
+
+
+<p id="downloads", class="auto-style4"><strong>Downloads</strong></p>
+
+<table cellSpacing=4 cellPadding=2 border=0 style="width: 90%">
+<tr COLSPAN="2">
+	<td align="center" valign="center">
+		<img style="padding:0; clear:both; " src="figures/paper_icon.png" align="middle" alt="Snapshot for paper" class="pdf" width="210" />
+	</td>
+	<td align="left" class="auto-style5">"Automated Melanoma Recognition in Dermoscopy Images via Very Deep Residual Networks&quot;<br>
+Lequan Yu, Hao Chen, Qi Dou, Jing Qin, Pheng Ann Heng.<br><br>
+<img alt="" height="32" src="figures/pdf_icon.gif" width="31">&nbsp;&nbsp;[<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7792699">Paper</a>]<br><br> 
+<img alt="" height="32" width="32" src="figures/github_icons.jpg">&nbsp;[<a href="https://github.com/yulequan/melanoma-recognition">Code</a>] <!--Please download from <a href="https://www.dropbox.com/s/925xcxlvohd0hco/%5BEG_code_data%5D_release.zip?dl=0">Dropbox</a> or <a href="http://pan.baidu.com/s/1bQ4yHC">Baiduyun</a>.--> <br><br> &nbsp;
+</td>
+</tr>
+</table>
+<br>
+
+<p class="auto-style1"><font color="#999999">Last update: Dec., 2016</font></p>
+
+
+</body>
+
+</html>
