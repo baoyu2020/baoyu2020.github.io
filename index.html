@@ -2,13 +2,13 @@
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<link rel="icon" href="pic/hku.png">
+<link rel="icon" href="pic/szu.png">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
 <meta name="keywords" content="Youneng Bao, Bao Youneng, CityU, City University of Hong Kong, HIT, Harbin Institute of Technology, Visual Data Compression, AI System Security, Deployment"> 
 <meta name="description" content="Youneng Bao is a Postdoctoral Research Fellow at CityU.">
 <link rel="stylesheet" href="jemdoc.css" type="text/css">
-<title>Youneng Bao</title>
+<title>Youneng Bao's homepage</title>
 
 
 <script>
@@ -42,7 +42,7 @@
 		<tr>
 			<td width="670">
 				<div id="toptitle">					
-					<h1>Youneng Bao (鲍有能)</h1><h1>
+					<h1>Youneng Bao</h1><h1>
 				</h1></div>
 
 				<h3>Postdoctoral Research Fellow</h3>
@@ -78,11 +78,34 @@
     I also have industry experience as an Intelligent System Engineer at Mindray and as a Research Intern at Peng Cheng Laboratory.
 </p>
 
-
+<h2>Research Interests</h2>
+<ul>
+	<li>
+		<b>Multimedia Compression and Transmission</b>
+		<ul>
+			<li>Learned Image/Video Compression</li>
+			<li>Semantic Compression</li>
+		</ul>
+	</li>
+	<li>
+		<b>Model Compression</b>
+		<ul>
+			<li>Model Quantization</li>
+			<li>Token Compression</li>
+		</ul>
+	</li>
+	<li>
+		<b>Data Engineering for Machine Learning</b>
+		<ul>
+			<li>Dataset Distillation</li>
+			<li>Data Selection </li>
+		</ul>
+	</li>
+</ul>
 
 <h2>News</h2>
 
-<div style="height: 240px; overflow: auto;">
+<div style="max-height: 240px; overflow: auto;">
 <ul>
 	<li>
 		[11/2025] Invited to serve as Guest Associated Editor, IEEE Transactions on Medical Imaging (TMI).
@@ -112,12 +135,21 @@
 
 <div id="publications">
 <h2>Selected Publications [<a href="https://scholar.google.com/citations?user=lKD67zcAAAAJ&hl=en">Google Scholar</a>]</h2>
+
+    <div style="margin-bottom: 1em;">
+        <strong>Sort by:</strong> 
+        <input type="radio" name="sort" id="sort-year" checked onclick="sortByYear()"> <label for="sort-year">Year</label>
+        <input type="radio" name="sort" id="sort-type" onclick="sortByType()"> <label for="sort-type">Type</label>
+    </div>
+
+    <div id="pub-list-year">
 	<p><font face="Arial" size="4"><b>2026</b></font></p>
     <ul>
     <li>
         <b>Youneng Bao</b>, Yulong Chen, Yiping Liu, Yichen Yang, Peng Qin, Mu Li, and Yongsheng Liang<sup>†</sup>.<br>
         DynaQuant: Dynamic Mixed-Precision Quantization for Learned Image Compression.<br>
-        <em>AAAI Conference on Artificial Intelligence</em> (<i><b>AAAI</b></i>), 2026.
+        <em>AAAI Conference on Artificial Intelligence</em> (<i><b>AAAI</b></i>), 2026.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     </ul>
 
@@ -126,22 +158,26 @@
     <li>
         <b>Youneng Bao</b>, Yiping Liu, Zhuo Chen, Yongsheng Liang, Mu Li, Kede Ma<sup>†</sup>.<br>
         Dataset Distillation as Data Compression: A Rate-Utility Perspective.<br>
-        <em>International Conference on Computer Vision</em> (<i><b>ICCV</b></i>), 2025.
+        <em>International Conference on Computer Vision</em> (<i><b>ICCV</b></i>), 2025.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     <li>
         <b>Youneng Bao</b>, Wen Tan, Chuanmin Jia, Mu Li, Yongsheng Liang<sup>†</sup>, Yonghong Tian.<br>
         ShiftLIC: High-Efficiency Learned Image Compression with Spatial-Channel Shift Operations.<br>
-        <em>IEEE Transactions on Circuits and Systems for Video Technology</em> (<i><b>TCSVT</b></i>), 2025.
+        <em>IEEE Transactions on Circuits and Systems for Video Technology</em> (<i><b>TCSVT</b></i>), 2025.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     <li>
         <b>Youneng Bao</b>, Wen Tan, Mu Li, Jiacong Chen, Qingyu Mao, Yongsheng Liang<sup>†</sup>.<br>
         SFNIC: Hybrid Spatial-Frequency Information for Lightweight Neural Image Compression.<br>
-        <em>CAAI Transactions on Intelligence Technology</em>, 2025.
+        <em>CAAI Transactions on Intelligence Technology</em>, 2025.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     <li>
         <b>Youneng Bao</b>, Wen Tan, Mu Li, Fanyang Meng, Yongsheng Liang<sup>†</sup>.<br>
         Stable Successive Neural Image Compression via Coherent Demodulation-based Transformation.<br>
-        <em>Signal Processing</em>, 2025.
+        <em>Signal Processing</em>, 2025.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
 	</ul>
 
@@ -150,12 +186,14 @@
     <li>
         Mu Li, <b>Youneng Bao</b>, Xiaohang Sui, Jinxing Li<sup>†</sup>, Guangming Lu, Yong Xu.<br>
         Learning Content-Weighted Pseudocylindrical Representation for 360° Image Compression.<br>
-        <em>IEEE Transactions on Image Processing</em> (<i><b>TIP</b></i>), 2024.
+        <em>IEEE Transactions on Image Processing</em> (<i><b>TIP</b></i>), 2024.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     <li>
         Zhi Cao, <b>Youneng Bao*</b>, Fanyang Meng, Chao Li, Wen Tan, Genhong Wang, and Yongsheng Liang<sup>†</sup>.<br>
         Enhancing Adversarial Training with Prior Knowledge Distillation for Robust Image Compression.<br>
-        <em>IEEE International Conference on Acoustics, Speech and Signal Processing</em> (<i><b>ICASSP</b></i>), 2024.
+        <em>IEEE International Conference on Acoustics, Speech and Signal Processing</em> (<i><b>ICASSP</b></i>), 2024.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     </ul>
 
@@ -164,12 +202,14 @@
     <li>
         <b>Youneng Bao</b>, Wen Tan, Linfeng Zheng, Fanyang Meng, Wei Liu, Yongsheng Liang<sup>†</sup>.<br>
         Taylor Series based Dual-Branch Transformation for Learned Image Compression.<br>
-        <em>Signal Processing</em>, 2023.
+        <em>Signal Processing</em>, 2023.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     <li>
         Can Luo, <b>Youneng Bao*</b>, Wen Tan, Chao Li, Fanyang Meng, and Yongsheng Liang<sup>†</sup>.<br>
         A Complex-Valued Neural Network Based Robust Image Compression.<br>
-        <em>Chinese Conference on Pattern Recognition and Computer Vision</em> (<i><b>PRCV</b></i>), 2023.
+        <em>Chinese Conference on Pattern Recognition and Computer Vision</em> (<i><b>PRCV</b></i>), 2023.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     </ul>
 
@@ -178,7 +218,8 @@
     <li>
         <b>Youneng Bao</b>, Fanyang Meng, Chao Li, Siwei Ma, Yonghong Tian, Yongsheng Liang<sup>†</sup>.<br>
         Nonlinear Transforms in Learned Image Compression from a Communication Perspective.<br>
-        <em>IEEE Transactions on Circuits and Systems for Video Technology</em> (<i><b>TCSVT</b></i>), 2022.
+        <em>IEEE Transactions on Circuits and Systems for Video Technology</em> (<i><b>TCSVT</b></i>), 2022.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     </ul>
 
@@ -187,9 +228,98 @@
     <li>
         <b>Youneng Bao</b>, Chao Li, Fanyang Meng, Yongsheng Liang<sup>†</sup>, Wei Liu, Kaiyu Liu.<br>
         MBB: A Multi-Scale Method for Data based on Bit Plane Slicing.<br>
-        <em>IEEE International Conference on Image Processing</em> (<i><b>ICIP</b></i>), 2021.
+        <em>IEEE International Conference on Image Processing</em> (<i><b>ICIP</b></i>), 2021.<br>
+        <a href="#">[pdf]</a> <a href="#">[code]</a>
     </li>
     </ul>
+    </div>
+
+    <div id="pub-list-type" style="display:none;">
+        <p><font face="Arial" size="4"><b>Journal Articles</b></font></p>
+        <ul>
+            <li>
+                <b>Youneng Bao</b>, Wen Tan, Chuanmin Jia, Mu Li, Yongsheng Liang<sup>†</sup>, Yonghong Tian.<br>
+                ShiftLIC: High-Efficiency Learned Image Compression with Spatial-Channel Shift Operations.<br>
+                <em>IEEE Transactions on Circuits and Systems for Video Technology</em> (<i><b>TCSVT</b></i>), 2025.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+            <li>
+                <b>Youneng Bao</b>, Wen Tan, Mu Li, Jiacong Chen, Qingyu Mao, Yongsheng Liang<sup>†</sup>.<br>
+                SFNIC: Hybrid Spatial-Frequency Information for Lightweight Neural Image Compression.<br>
+                <em>CAAI Transactions on Intelligence Technology</em>, 2025.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+            <li>
+                <b>Youneng Bao</b>, Wen Tan, Mu Li, Fanyang Meng, Yongsheng Liang<sup>†</sup>.<br>
+                Stable Successive Neural Image Compression via Coherent Demodulation-based Transformation.<br>
+                <em>Signal Processing</em>, 2025.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+            <li>
+                Mu Li, <b>Youneng Bao</b>, Xiaohang Sui, Jinxing Li<sup>†</sup>, Guangming Lu, Yong Xu.<br>
+                Learning Content-Weighted Pseudocylindrical Representation for 360° Image Compression.<br>
+                <em>IEEE Transactions on Image Processing</em> (<i><b>TIP</b></i>), 2024.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+            <li>
+                <b>Youneng Bao</b>, Wen Tan, Linfeng Zheng, Fanyang Meng, Wei Liu, Yongsheng Liang<sup>†</sup>.<br>
+                Taylor Series based Dual-Branch Transformation for Learned Image Compression.<br>
+                <em>Signal Processing</em>, 2023.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+            <li>
+                <b>Youneng Bao</b>, Fanyang Meng, Chao Li, Siwei Ma, Yonghong Tian, Yongsheng Liang<sup>†</sup>.<br>
+                Nonlinear Transforms in Learned Image Compression from a Communication Perspective.<br>
+                <em>IEEE Transactions on Circuits and Systems for Video Technology</em> (<i><b>TCSVT</b></i>), 2022.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+        </ul>
+
+        <p><font face="Arial" size="4"><b>Conference Articles</b></font></p>
+        <ul>
+            <li>
+                <b>Youneng Bao</b>, Yulong Chen, Yiping Liu, Yichen Yang, Peng Qin, Mu Li, and Yongsheng Liang<sup>†</sup>.<br>
+                DynaQuant: Dynamic Mixed-Precision Quantization for Learned Image Compression.<br>
+                <em>AAAI Conference on Artificial Intelligence</em> (<i><b>AAAI</b></i>), 2026.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+            <li>
+                <b>Youneng Bao</b>, Yiping Liu, Zhuo Chen, Yongsheng Liang, Mu Li, Kede Ma<sup>†</sup>.<br>
+                Dataset Distillation as Data Compression: A Rate-Utility Perspective.<br>
+                <em>International Conference on Computer Vision</em> (<i><b>ICCV</b></i>), 2025.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+            <li>
+                Zhi Cao, <b>Youneng Bao*</b>, Fanyang Meng, Chao Li, Wen Tan, Genhong Wang, and Yongsheng Liang<sup>†</sup>.<br>
+                Enhancing Adversarial Training with Prior Knowledge Distillation for Robust Image Compression.<br>
+                <em>IEEE International Conference on Acoustics, Speech and Signal Processing</em> (<i><b>ICASSP</b></i>), 2024.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+            <li>
+                Can Luo, <b>Youneng Bao*</b>, Wen Tan, Chao Li, Fanyang Meng, and Yongsheng Liang<sup>†</sup>.<br>
+                A Complex-Valued Neural Network Based Robust Image Compression.<br>
+                <em>Chinese Conference on Pattern Recognition and Computer Vision</em> (<i><b>PRCV</b></i>), 2023.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+            <li>
+                <b>Youneng Bao</b>, Chao Li, Fanyang Meng, Yongsheng Liang<sup>†</sup>, Wei Liu, Kaiyu Liu.<br>
+                MBB: A Multi-Scale Method for Data based on Bit Plane Slicing.<br>
+                <em>IEEE International Conference on Image Processing</em> (<i><b>ICIP</b></i>), 2021.<br>
+                <a href="#">[pdf]</a> <a href="#">[code]</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function sortByYear() {
+            document.getElementById('pub-list-year').style.display = 'block';
+            document.getElementById('pub-list-type').style.display = 'none';
+        }
+        function sortByType() {
+            document.getElementById('pub-list-year').style.display = 'none';
+            document.getElementById('pub-list-type').style.display = 'block';
+        }
+    </script>
 <br>
 </div>
 
