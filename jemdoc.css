@@ -37,24 +37,20 @@ body {
 #layout-menu {
 	background: #f6f6f6;
 	/*border: 1px solid #dddddd;*/
-	padding-top: 0.4em;
-	padding-bottom: 1.8em;
-	padding-left: 8px;
-	padding-right: 8px;
-	font-size: 1.0em;
-	width: auto;
-	white-space: nowrap;
-    /*text-align: left;*/
-    /*vertical-align: top;*/
+	padding: 10px 0;
+	font-size: 1.1em;
+	width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #layout-menu a {
-    list-style-type: none;
-    float: left;
-    width: 13%;    
+    text-decoration: none;
     text-align: center;
-    line-height: 1.5em;
-	margin-left: 0.5em;
+    padding: 5px 15px;
+    font-weight: bold;
 }
 
 #layout-menu td {
@@ -62,6 +58,7 @@ body {
     vertical-align: top;
 }
 
+/*
 @media screen and (max-width: 600px) {
   #layout-menu a:not(:first-child) {display: none;}
   #layout-menu a.icon {
@@ -69,6 +66,7 @@ body {
     display: block;
   }
 }
+*/
 
 #layout-content {
 	padding-top: 0.0em;
