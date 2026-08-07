@@ -146,14 +146,22 @@
 
     <p style="margin-bottom: 5px;">(* Equal Contribution, <sup>†</sup> Corresponding Author)</p>
 
-    <div style="margin-bottom: 1em;">
+    <div style="margin-bottom: 0.4em;">
         <strong>Sort by:</strong> 
         <input type="radio" name="sort" id="sort-year" checked onclick="sortByYear()"> <label for="sort-year">Year</label>
         <input type="radio" name="sort" id="sort-type" onclick="sortByType()"> <label for="sort-type">Type</label>
     </div>
+    <div style="margin-bottom: 1em;">
+        <a href="#pub-year-2026" onclick="sortByYear()">2026</a> |
+        <a href="#pub-year-2025" onclick="sortByYear()">2025</a> |
+        <a href="#pub-year-2024" onclick="sortByYear()">2024</a> |
+        <a href="#pub-year-2023" onclick="sortByYear()">2023</a> |
+        <a href="#pub-year-2022" onclick="sortByYear()">2022</a> |
+        <a href="#pub-year-2021" onclick="sortByYear()">2021</a>
+    </div>
 
     <div id="pub-list-year">
-	<p><font face="Arial" size="4"><b>2026</b></font></p>
+	<p id="pub-year-2026"><font face="Arial" size="4"><b>2026</b></font></p>
     <ul>
     <li>
         Jiacong Chen, Qingyu Mao, Xiandong Meng, Shuai Liu, Chao Li, Fanyang Meng, <b>Youneng Bao</b><sup>†</sup>, and Yongsheng Liang<sup>†</sup>.<br>
@@ -181,7 +189,7 @@
     </li>
     </ul>
 
-	<p><font face="Arial" size="4"><b>2025</b></font></p>
+	<p id="pub-year-2025"><font face="Arial" size="4"><b>2025</b></font></p>
 	<ul>
     <li>
         <b>Youneng Bao</b>, Yiping Liu, Zhuo Chen, Yongsheng Liang, Mu Li, Kede Ma<sup>†</sup>.<br>
@@ -233,7 +241,7 @@
     </li>
 	</ul>
 
-    <p><font face="Arial" size="4"><b>2024</b></font></p>
+    <p id="pub-year-2024"><font face="Arial" size="4"><b>2024</b></font></p>
     <ul>
     <li>
         Jiacong Chen, Qingyu Mao, <b>Youneng Bao</b>, Xiandong Meng, Fanyang Meng, Ronggang Wang, Yongsheng Liang.<br>
@@ -261,7 +269,7 @@
     </li>
     </ul>
 
-    <p><font face="Arial" size="4"><b>2023</b></font></p>
+    <p id="pub-year-2023"><font face="Arial" size="4"><b>2023</b></font></p>
     <ul>
     <li>
         <b>Youneng Bao</b>, Wen Tan, Linfeng Zheng, Fanyang Meng, Wei Liu, Yongsheng Liang<sup>†</sup>.<br>
@@ -277,7 +285,7 @@
     </li>
     </ul>
 
-    <p><font face="Arial" size="4"><b>2022</b></font></p>
+    <p id="pub-year-2022"><font face="Arial" size="4"><b>2022</b></font></p>
     <ul>
     <li>
         <b>Youneng Bao</b>, Fanyang Meng, Chao Li, Siwei Ma, Yonghong Tian, Yongsheng Liang<sup>†</sup>.<br>
@@ -293,7 +301,7 @@
     </li>
     </ul>
 
-    <p><font face="Arial" size="4"><b>2021</b></font></p>
+    <p id="pub-year-2021"><font face="Arial" size="4"><b>2021</b></font></p>
     <ul>
     <li>
         <b>Youneng Bao</b>, Chao Li, Fanyang Meng, Yongsheng Liang<sup>†</sup>, Wei Liu, Kaiyu Liu.<br>
@@ -480,8 +488,8 @@
 <div id="footer">
 	<div id="footer-text"></div>
     <div style="text-align: center; font-size: 14px; color: #888; margin-top: 10px;">
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        <span id="busuanzi_container_site_pv">Total visits: <span id="busuanzi_value_site_pv"></span></span>
+        <script defer src="https://events.vercount.one/js"></script>
+        <span id="vercount_container_site_pv">Total visits: <span id="vercount_value_site_pv"></span></span>
     </div>
 </div>
 </body></html>
