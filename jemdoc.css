@@ -114,15 +114,93 @@ p { margin: 0 0 16px; }
 .publication-links a { margin-right: 8px; }
 .publication[hidden], .publication-year[hidden] { display: none; }
 
-.people-intro { margin-top: 42px; }
-.lab-roster { margin-bottom: 90px; }
+.lab-roster {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(390px, 38vw, 440px);
+  column-gap: clamp(36px, 4vw, 56px);
+  align-items: start;
+  margin: 30px 0 90px;
+}
+.faculty-block { grid-column: 1; grid-row: 1; }
+.recruitment-board {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin: 0;
+  padding: 15px 18px 16px;
+  border: 1px solid #cbd4e1;
+  border-top: 3px solid var(--blue);
+  background: #fafbfd;
+}
+.recruitment-heading {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0 14px;
+  align-items: baseline;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.recruitment-kicker {
+  grid-column: 1;
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.recruitment-heading h1 {
+  grid-column: 2;
+  margin: 0;
+  color: var(--blue);
+  font-size: 26px;
+  line-height: 1.05;
+}
+.recruitment-heading > p:last-child {
+  grid-column: 1 / -1;
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+.recruitment-list { margin-top: 0; }
+.recruitment-item {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 7px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.recruitment-item:last-child { padding-bottom: 0; border-bottom: 0; }
+.recruitment-item > div {
+  display: block;
+}
+.recruitment-number {
+  padding-top: 2px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.recruitment-item h2 {
+  margin: 0 0 3px;
+  padding: 0;
+  color: var(--blue-dark);
+  font-size: 17px;
+  line-height: 1.25;
+}
+.recruitment-item p {
+  margin: 0;
+  color: #3f3f3f;
+  font-size: 14px;
+  line-height: 1.4;
+}
 .faculty-block h2, .roster-group h2 { margin-top: 0; }
 .member-profile { display: grid; grid-template-columns: 130px 1fr; gap: 24px; align-items: start; }
 .member-profile img { width: 130px; height: 130px; object-fit: cover; object-position: center 15%; }
 .member-profile h3 { margin: 0 0 7px; color: var(--blue); font-size: 22px; }
 .member-profile p { margin-bottom: 8px; text-align: left; font-size: 16px; line-height: 1.4; }
 .member-links { font-size: 15px !important; }
-.roster-groups { margin-top: 56px; }
+.roster-groups { grid-column: 1; grid-row: 2; margin-top: 56px; }
 .roster-group { min-height: 78px; }
 .roster-group h2 { margin-bottom: 10px; font-size: 22px; }
 .roster-list { min-height: 22px; }
@@ -152,7 +230,19 @@ p { margin: 0 0 16px; }
   .publication-search { flex-basis: 100%; width: 100%; }
   #publication-count { width: 100%; margin-left: 0; text-align: right; }
   .interest-grid, .two-columns { grid-template-columns: 1fr; }
-  .roster-groups { margin-top: 46px; }
+  .lab-roster { grid-template-columns: 1fr; margin-top: 24px; }
+  .recruitment-board {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 30px;
+    padding: 16px;
+  }
+  .recruitment-heading h1 { font-size: 25px; }
+  .recruitment-heading > p:last-child { font-size: 13px; }
+  .recruitment-item { grid-template-columns: 18px 1fr; gap: 7px; }
+  .recruitment-item h2 { font-size: 17px; }
+  .recruitment-item p { font-size: 14px; }
+  .roster-groups { grid-column: 1; grid-row: 3; margin-top: 46px; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
   .member-profile { grid-template-columns: 100px 1fr; gap: 18px; }
   .member-profile img { width: 100px; height: 100px; }
