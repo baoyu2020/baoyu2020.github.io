@@ -203,7 +203,16 @@ p { margin: 0 0 16px; }
 .roster-groups { grid-column: 1; grid-row: 2; margin-top: 56px; }
 .roster-group { min-height: 78px; }
 .roster-group h2 { margin-bottom: 10px; font-size: 22px; }
-.roster-list { min-height: 22px; }
+.roster-list { min-height: 22px; margin: 0; padding: 0; list-style: none; }
+.roster-list li {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.38fr) minmax(0, 1fr);
+  gap: 12px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.roster-name { color: var(--blue-dark); font-weight: 700; }
+.roster-meta { color: var(--muted); font-size: 14px; }
 
 .site-footer { display: flex; justify-content: space-between; gap: 24px; margin-top: 70px; padding: 18px 0 30px; color: #888; font-size: 14px; }
 .visit-count { display: inline !important; visibility: visible !important; }
@@ -243,6 +252,7 @@ p { margin: 0 0 16px; }
   .recruitment-item h2 { font-size: 17px; }
   .recruitment-item p { font-size: 14px; }
   .roster-groups { grid-column: 1; grid-row: 3; margin-top: 46px; }
+  .roster-list li { grid-template-columns: 1fr; gap: 1px; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
   .member-profile { grid-template-columns: 100px 1fr; gap: 18px; }
   .member-profile img { width: 100px; height: 100px; }
