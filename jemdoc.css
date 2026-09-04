@@ -32,10 +32,10 @@ img { max-width: 100%; }
 
 .profile {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 44px;
   align-items: center;
-  min-height: 340px;
+  min-height: 300px;
 }
 .profile h1 {
   margin: 0 0 34px;
@@ -50,7 +50,7 @@ img { max-width: 100%; }
 .contact { margin: 26px 0 0; font-size: 20px; }
 .external-links { display: flex; flex-wrap: wrap; gap: 0 9px; margin: 15px 0 0; font-size: 20px; }
 .external-links a { text-decoration: none; }
-.portrait { width: 320px; height: 320px; object-fit: cover; object-position: center 16%; justify-self: end; }
+.portrait { width: 280px; height: 280px; object-fit: cover; object-position: center 16%; justify-self: end; }
 
 h2 {
   margin: 34px 0 20px;
@@ -194,6 +194,30 @@ p { margin: 0 0 16px; }
   font-size: 14px;
   line-height: 1.4;
 }
+.home-recruitment-board {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  width: min(900px, 100%);
+  margin: 20px auto 36px 0;
+  padding: 18px 22px;
+  border: 1px solid #cbd4e1;
+  border-top: 3px solid var(--blue);
+  background: #fafbfd;
+}
+.home-recruitment-board h2 {
+  margin: 0;
+  padding: 0;
+  color: var(--blue);
+  font-size: 24px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.home-recruitment-points { margin: 0; padding-left: 21px; color: #3f3f3f; font-size: 15px; line-height: 1.45; }
+.home-recruitment-points li { margin-bottom: 4px; padding-left: 2px; }
+.home-recruitment-points li:last-child { margin-bottom: 0; }
+.home-recruitment-points strong:first-child { color: var(--blue-dark); }
 .faculty-block h2, .roster-group h2 { margin-top: 0; }
 .member-profile { display: grid; grid-template-columns: 130px 1fr; gap: 24px; align-items: start; }
 .member-profile img { width: 130px; height: 130px; object-fit: cover; object-position: center 15%; }
@@ -222,7 +246,7 @@ p { margin: 0 0 16px; }
   .home-page { padding-top: 34px; }
   .profile { grid-template-columns: 1fr; gap: 34px; }
   .profile h1 { margin-bottom: 24px; }
-  .portrait { width: 210px; height: 210px; justify-self: start; }
+  .portrait { width: 180px; height: 180px; justify-self: start; }
   .position { font-size: 18px; }
   .affiliation-line { white-space: normal; }
   .contact, .external-links { font-size: 17px; }
@@ -251,6 +275,15 @@ p { margin: 0 0 16px; }
   .recruitment-item { grid-template-columns: 18px 1fr; gap: 7px; }
   .recruitment-item h2 { font-size: 17px; }
   .recruitment-item p { font-size: 14px; }
+  .home-recruitment-board {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    width: 100%;
+    margin: 28px 0 36px;
+    padding: 16px 18px;
+  }
+  .home-recruitment-board h2 { font-size: 23px; }
+  .home-recruitment-points { font-size: 15px; }
   .roster-groups { grid-column: 1; grid-row: 3; margin-top: 46px; }
   .roster-list li { grid-template-columns: 1fr; gap: 1px; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
