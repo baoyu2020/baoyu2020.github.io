@@ -214,7 +214,7 @@ p { margin: 0 0 16px; }
   line-height: 1.1;
   white-space: nowrap;
 }
-.home-recruitment-points { margin: 0; padding-left: 21px; color: #3f3f3f; font-size: 15px; line-height: 1.45; }
+.home-recruitment-points { margin: 0; padding-left: 21px; color: #3f3f3f; line-height: 1.45; }
 .home-recruitment-points li { margin-bottom: 4px; padding-left: 2px; }
 .home-recruitment-points li:last-child { margin-bottom: 0; }
 .home-recruitment-points strong:first-child { color: var(--blue-dark); }
@@ -283,7 +283,6 @@ p { margin: 0 0 16px; }
     padding: 16px 18px;
   }
   .home-recruitment-board h2 { font-size: 23px; }
-  .home-recruitment-points { font-size: 15px; }
   .roster-groups { grid-column: 1; grid-row: 3; margin-top: 46px; }
   .roster-list li { grid-template-columns: 1fr; gap: 1px; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
